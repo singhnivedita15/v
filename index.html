@@ -197,6 +197,7 @@
     const noBtn = document.getElementById("noBtn");
     const result = document.getElementById("result");
     const hint = document.getElementById("hint");
+    const question = document.getElementById("question");
 
     /* ---------- CONFETTI ---------- */
     const confettiCanvas = document.getElementById("confettiCanvas");
@@ -291,11 +292,12 @@
 
     /* ---------- YES CLICK ---------- */
     yesBtn.addEventListener("click", () => {
-      zone.style.display = "none";
-      hint.style.display = "none";     // HIDE THE HINT
-      result.style.display = "block";
-      resizeConfettiCanvas();
-      fullScreenConfetti();
+  zone.style.display = "none";
+  hint.style.display = "none";
+  question.style.display = "none"; // ← BYE QUESTION
+  result.style.display = "block";
+  resizeConfettiCanvas();
+  fullScreenConfetti();
     });
   </script>
 </body>
